@@ -1,4 +1,4 @@
-/* STUPID FAST Performance Optimized CSS for HatchPoint Solutions */
+/* Performance-Optimized CSS for HatchPoint Solutions */
 
 /* Critical Performance Optimizations */
 * {
@@ -20,10 +20,7 @@ body {
   line-height: 1.6;
 }
 
-/* GPU Acceleration for All Animated Elements */
-.animate-float,
-.animate-pulse-slow,
-.animate-gradient,
+/* GPU Acceleration for Animated Elements */
 [data-framer-motion],
 .motion-div {
   will-change: transform, opacity;
@@ -33,45 +30,7 @@ body {
   contain: layout style paint;
 }
 
-/* Optimized Animations - Reduced Complexity */
-@keyframes float {
-  0%, 100% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, -20px, 0);
-  }
-}
-
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    opacity: 0.7;
-    transform: scale3d(1.02, 1.02, 1);
-  }
-}
-
-@keyframes gradient {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes purple-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(168, 85, 247, 0.6);
-  }
-}
-
+/* Optimized Animations */
 @keyframes shimmer {
   0% {
     transform: translateX(-100%);
@@ -79,24 +38,6 @@ body {
   100% {
     transform: translateX(100%);
   }
-}
-
-/* Animation Classes - Optimized */
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-pulse-slow {
-  animation: pulse-slow 4s ease-in-out infinite;
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient 3s ease infinite;
-}
-
-.animate-purple-glow {
-  animation: purple-glow 3s ease-in-out infinite;
 }
 
 /* Performance-First Hover Effects */
@@ -129,68 +70,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Typography - Fluid Scaling */
-.text-responsive {
-  font-size: clamp(0.875rem, 2.5vw, 1rem);
-}
-
-.text-responsive-lg {
-  font-size: clamp(1.125rem, 4vw, 1.5rem);
-}
-
-.text-responsive-xl {
-  font-size: clamp(1.5rem, 6vw, 2.5rem);
-}
-
-.text-responsive-2xl {
-  font-size: clamp(2rem, 8vw, 4rem);
-}
-
-.text-responsive-3xl {
-  font-size: clamp(2.5rem, 10vw, 6rem);
-}
-
-/* Optimized Button Styles */
-.btn-primary {
-  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  padding: 12px 24px;
-  font-weight: 600;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.btn-primary:hover {
-  transform: translate3d(0, -2px, 0);
-  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
-}
-
-.btn-primary:active {
-  transform: translate3d(0, 0, 0);
-}
-
-/* Optimized Card Styles */
-.card-modern {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card-modern:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(14, 165, 233, 0.3);
-  transform: translate3d(0, -4px, 0);
-}
-
-/* Custom Scrollbar - Optimized */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -229,36 +109,6 @@ textarea:focus-visible {
   color: white;
 }
 
-/* Responsive Breakpoints - Mobile First */
-@media (max-width: 640px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .text-responsive-3xl {
-    font-size: clamp(2rem, 8vw, 3rem);
-  }
-  
-  .text-responsive-2xl {
-    font-size: clamp(1.5rem, 6vw, 2rem);
-  }
-}
-
-@media (min-width: 641px) and (max-width: 1024px) {
-  .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1025px) {
-  .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
 /* Performance Optimizations */
 .gpu-accelerated {
   transform: translateZ(0);
@@ -275,12 +125,6 @@ textarea:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-  
-  .animate-float,
-  .animate-pulse-slow,
-  .animate-gradient {
-    animation: none !important;
   }
 }
 
@@ -313,62 +157,7 @@ textarea:focus-visible {
   }
 }
 
-/* Critical Layout Fixes */
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Overflow Handling */
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
-/* Z-index Management */
-.z-10 { z-index: 10; }
-.z-20 { z-index: 20; }
-.z-30 { z-index: 30; }
-.z-40 { z-index: 40; }
-.z-50 { z-index: 50; }
-
-/* Interactive Elements */
-.interactive {
-  cursor: pointer;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-.interactive:active {
-  transform: scale3d(0.98, 0.98, 1);
-}
-
 /* Loading States */
-.loading {
-  position: relative;
-  overflow: hidden;
-}
-
 .loading::after {
   content: '';
   position: absolute;
@@ -380,58 +169,15 @@ textarea:focus-visible {
   animation: shimmer 1.5s infinite;
 }
 
-/* Container Queries Support */
-@container (max-width: 400px) {
-  .container-responsive {
-    padding: 1rem;
-  }
-}
-
-@container (min-width: 401px) {
-  .container-responsive {
-    padding: 1.5rem;
-  }
-}
-
-/* Optimized Transitions */
-.fast-transition {
-  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.medium-transition {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.slow-transition {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Critical Performance Classes */
-.will-change-transform {
-  will-change: transform;
-}
-
-.will-change-opacity {
-  will-change: opacity;
-}
-
-.will-change-auto {
-  will-change: auto;
-}
-
-/* Layout Containment */
-.contain-layout {
-  contain: layout;
-}
-
-.contain-style {
-  contain: style;
-}
-
-.contain-paint {
-  contain: paint;
-}
-
-.contain-strict {
-  contain: strict;
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
