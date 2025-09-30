@@ -73,7 +73,7 @@ const ServiceModal = ({ isOpen, onClose, service }) => {
                         .replace(/\b(At Hatchpoint Solutions|Hatchpoint Solutions)\b/g, '<strong class="text-gray-900 font-bold">$1</strong>')
                         .replace(/\b(Digital transformation|Technology|Strategy)\b/g, '<strong class="text-gray-800 font-semibold">$1</strong>')
                         .replace(/\b(Organizational Readiness|Business Readiness|Technology Readiness)\b/g, '<strong class="text-orange-600 font-semibold">$1</strong>')
-                        .replace(/\b(34\+ years|20%\+|400\+ person|multi-million-dollar)\b/g, '<span class="text-orange-600 font-bold">$1</span>')
+                        .replace(/\b(Deep Industry Experience|20%\+|400\+ person|multi-million-dollar)\b/g, '<span class="text-orange-600 font-bold">$1</span>')
                         .replace(/\b(execution gap|digital on paper|ABC framework)\b/g, '<em class="text-orange-600 font-medium italic">$1</em>')
                         .replace(/\b(leadership alignment|cultural adaptability|workforce capability|clarity of vision|operating models|financial commitment|infrastructure|data maturity|ability to scale)\b/g, '<span class="text-gray-700 font-medium">$1</span>');
                       

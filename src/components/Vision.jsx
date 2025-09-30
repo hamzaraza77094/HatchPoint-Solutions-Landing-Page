@@ -34,7 +34,7 @@ const Vision = () => {
               whileHover={{ y: -5 }}
             >
               <Target className="w-12 h-12 text-orange-500 mx-auto mb-6" />
-              <h3 className="text-xl font-quicksand font-semibold text-gray-800 mb-4">34+ Years Experience</h3>
+              <h3 className="text-xl font-quicksand font-semibold text-gray-800 mb-4">Deep Industry Experience</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Digital leadership in global energy and oil & gas industries with unmatched expertise in building, scaling, and monetizing digital businesses.
               </p>
