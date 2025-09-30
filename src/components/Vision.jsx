@@ -13,7 +13,7 @@ const Vision = () => {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-quicksand font-semibold text-gray-800 mb-8">
-            The <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Hatchpoint</span> Difference
+            The <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">hatchPoint</span> Difference
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-12 max-w-4xl mx-auto font-light">
