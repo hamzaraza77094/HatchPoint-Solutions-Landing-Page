@@ -41,7 +41,7 @@ const Footer = () => {
           
           <div className="border-t border-gray-200 pt-8">
             <p className="text-gray-500 text-sm font-light">
-              © 2024 HatchPoint Solutions. All rights reserved.
+              © 2025 hatchPoint Solutions. All rights reserved.
             </p>
           </div>
         </motion.div>

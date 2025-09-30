@@ -81,7 +81,9 @@ const Vision = () => {
 
           <div className="bg-gray-50 backdrop-blur-sm rounded-3xl p-12 border border-gray-200 max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-quicksand font-semibold text-gray-800 mb-6">
-              What makes Hatchpoint different is simple: we've done it before.
+              What makes <span className="text-orange-600">hatch</span><span className="text-gray-800">Point</span> different
+              <br className="mb-4" />
+              <span className="text-orange-600 font-bold">we've done it before.</span>
             </h3>
             <p className="text-lg text-gray-600 font-light leading-relaxed">
               We know how to take strategies off the page and embed them into operations, align digital with growth, and turn investments into measurable ROI. 
