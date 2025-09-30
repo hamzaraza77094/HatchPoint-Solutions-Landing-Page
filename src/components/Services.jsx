@@ -63,12 +63,19 @@ const ServiceCard = ({ service, index, onClick }) => {
       className="group relative cursor-pointer"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      whileHover={{ y: -5 }}
+      transition={{ 
+        duration: 0.7, 
+        delay: index * 0.1,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }}
+      viewport={{ once: true, amount: 0.3 }}
+      whileHover={{ 
+        y: -8,
+        transition: { duration: 0.3, ease: "easeOut" }
+      }}
       onClick={onClick}
     >
-      <div className={`${service.bgColor} ${service.borderColor} bg-white border rounded-2xl p-8 h-full transition-all duration-300 group-hover:border-opacity-60 group-hover:shadow-lg group-hover:shadow-orange-500/20`}>
+      <div className={`${service.bgColor} ${service.borderColor} bg-white border rounded-2xl p-8 h-full transition-all duration-500 group-hover:border-orange-500/40 group-hover:shadow-2xl group-hover:shadow-orange-500/20 group-hover:scale-[1.02]`}>
         <div className="flex items-start space-x-6">
           <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
             <service.icon className="w-8 h-8 text-white" aria-hidden="true" />

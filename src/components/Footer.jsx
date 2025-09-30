@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion';
 
 const Footer = () => {
-  const footerLinks = ['About', 'Services', 'Vision', 'Community', 'Contact'];
+  const footerLinks = [
+    { label: 'Our Story', href: 'vision' },
+    { label: 'Framework', href: 'framework' },
+    { label: 'Services', href: 'services' },
+    { label: 'Contact', href: 'contact' }
+  ];
 
   return (
     <footer className="relative py-20 bg-white border-t border-gray-200">
@@ -14,7 +19,7 @@ const Footer = () => {
         >
           <div className="flex items-center justify-center space-x-3 mb-8">
             <img src="/Orange.svg" alt="HatchPoint Logo" className="h-10 w-10" />
-            <span className="text-gray-800 font-quicksand font-medium text-xl">HatchPoint Solutions</span>
+            <span className="font-quicksand font-medium text-xl"><span className="text-[#F77531]">hatch</span><span className="text-gray-800">Point Solutions</span></span>
           </div>
           
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto font-light">
@@ -24,12 +29,12 @@ const Footer = () => {
           <nav className="flex justify-center space-x-8 mb-8" aria-label="Footer navigation">
             {footerLinks.map((item) => (
               <a 
-                key={item} 
-                href={`#${item.toLowerCase()}`} 
-                className="text-gray-600 hover:text-orange-500 transition-colors duration-200 text-sm font-medium"
-                aria-label={`Navigate to ${item} section`}
+                key={item.label} 
+                href={`#${item.href}`} 
+                className="text-gray-600 hover:text-[#F77531] transition-colors duration-200 text-sm font-medium"
+                aria-label={`Navigate to ${item.label} section`}
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </nav>

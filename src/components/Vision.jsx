@@ -3,7 +3,7 @@ import { Target, Users, TrendingUp } from 'lucide-react';
 
 const Vision = () => {
   return (
-    <section id="vision" className="relative py-32 bg-white">
+    <section id="vision" className="relative py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -22,11 +22,16 @@ const Vision = () => {
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <motion.div 
-              className="bg-gray-50 backdrop-blur-sm rounded-3xl p-8 border border-gray-200"
+              className="bg-gray-50 backdrop-blur-sm rounded-3xl p-8 border border-gray-200 transition-all duration-500 hover:shadow-lg hover:scale-[1.02] hover:border-orange-500/30"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.7, 
+                delay: 0.1,
+                ease: [0.6, -0.05, 0.01, 0.99]
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+              whileHover={{ y: -5 }}
             >
               <Target className="w-12 h-12 text-orange-500 mx-auto mb-6" />
               <h3 className="text-xl font-quicksand font-semibold text-gray-800 mb-4">34+ Years Experience</h3>
@@ -36,11 +41,16 @@ const Vision = () => {
             </motion.div>
 
             <motion.div 
-              className="bg-gray-50 backdrop-blur-sm rounded-3xl p-8 border border-gray-200"
+              className="bg-gray-50 backdrop-blur-sm rounded-3xl p-8 border border-gray-200 transition-all duration-500 hover:shadow-lg hover:scale-[1.02] hover:border-orange-500/30"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.7, 
+                delay: 0.2,
+                ease: [0.6, -0.05, 0.01, 0.99]
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+              whileHover={{ y: -5 }}
             >
               <TrendingUp className="w-12 h-12 text-orange-600 mx-auto mb-6" />
               <h3 className="text-xl font-quicksand font-semibold text-gray-800 mb-4">Proven Results</h3>
@@ -50,11 +60,16 @@ const Vision = () => {
             </motion.div>
 
             <motion.div 
-              className="bg-gray-50 backdrop-blur-sm rounded-3xl p-8 border border-gray-200"
+              className="bg-gray-50 backdrop-blur-sm rounded-3xl p-8 border border-gray-200 transition-all duration-500 hover:shadow-lg hover:scale-[1.02] hover:border-orange-500/30"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.7, 
+                delay: 0.3,
+                ease: [0.6, -0.05, 0.01, 0.99]
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+              whileHover={{ y: -5 }}
             >
               <Users className="w-12 h-12 text-orange-600 mx-auto mb-6" />
               <h3 className="text-xl font-quicksand font-semibold text-gray-800 mb-4">Knowledge Transfer</h3>

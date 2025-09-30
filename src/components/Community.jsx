@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Zap, Building, DollarSign } from 'lucide-react';
+import { useScrollToSection } from '../hooks/useScrollToSection';
 
 const Community = () => {
+  const scrollToServices = useScrollToSection('services');
   const abcFramework = [
     {
       id: 'adopt',
       icon: Zap,
       title: "Adopt",
-      subtitle: "Proven digital tools for quick wins",
-      description: "Adopt proven digital tools that deliver quick wins and accelerate impact. Start with solutions that have demonstrated success in similar environments.",
+      subtitle: "Proven tools with AI-powered insights",
+      description: "Implement proven digital tools that deliver quick wins and accelerate impact. We leverage proprietary AI tools to provide unique insights, ensuring adoption of solutions strategically aligned with your specific needs.",
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-500/10",
       borderColor: "border-blue-500/20"
@@ -17,8 +19,8 @@ const Community = () => {
       id: 'build',
       icon: Building,
       title: "Build",
-      subtitle: "Differentiated competitive advantage",
-      description: "Build differentiated solutions that strengthen your unique competitive advantage. Create custom capabilities that set you apart from competitors.",
+      subtitle: "AI-guided bespoke solutions",
+      description: "Develop differentiated solutions that strengthen your unique competitive advantage. Our AI-driven insights guide the creation of custom capabilities, helping identify and capitalize on opportunities that truly set you apart.",
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-500/10",
       borderColor: "border-blue-500/20"
@@ -27,8 +29,8 @@ const Community = () => {
       id: 'commercialize',
       icon: DollarSign,
       title: "Commercialize",
-      subtitle: "New revenue streams",
-      description: "Commercialize your digital capabilities by packaging them into new services, products, or revenue streams. Turn internal initiatives into multi-million-dollar businesses.",
+      subtitle: "AI-identified revenue opportunities",
+      description: "Package your digital capabilities into new services, products, or revenue streams. Leverage AI insights to identify and maximize commercial opportunities, turning internal initiatives into multi-million-dollar businesses.",
       color: "from-emerald-500 to-teal-500",
       bgColor: "bg-emerald-500/10",
       borderColor: "border-emerald-500/20"
@@ -36,7 +38,7 @@ const Community = () => {
   ];
 
   return (
-    <section id="abc-framework" className="relative py-32 bg-gray-50">
+    <section id="framework" className="relative py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -50,13 +52,13 @@ const Community = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             Digital transformation can feel overwhelming — too many tools, too many trends, too many directions. 
-            That's why we break it down into the ABC framework to help you move with clarity and confidence.
+            That's why we use the <span className="font-medium text-gray-700">ABC framework, enhanced by AI-driven insights</span>, to help you move with clarity, confidence, and strategic precision.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {abcFramework.map((item, index) => (
-            <ABCCard key={item.id} item={item} index={index} />
+            <ABCCard key={item.id} item={item} index={index} scrollToServices={scrollToServices} />
           ))}
         </div>
 
@@ -69,12 +71,12 @@ const Community = () => {
         >
           <div className="bg-white backdrop-blur-sm border border-gray-200 rounded-3xl p-12 max-w-4xl mx-auto shadow-sm">
             <h3 className="text-2xl md:text-3xl font-quicksand font-semibold text-gray-800 mb-6">
-              This isn't theory — it's lived experience.
+              This isn't theory — it's proven, AI-enhanced methodology.
             </h3>
             <p className="text-lg text-gray-600 font-light leading-relaxed">
               We have turned internal initiatives into multi-million-dollar businesses by following this exact path. 
-              The ABC framework helps you move with clarity and confidence, ensuring every step of your digital journey 
-              builds towards <span className="text-orange-600 font-medium">measurable value</span>.
+              The ABC framework, <span className="text-orange-600 font-medium">powered by AI intelligence</span>, helps you move with clarity and confidence, 
+              ensuring every step of your digital journey builds towards measurable value and maximizes your commercial success.
             </p>
           </div>
         </motion.div>
@@ -83,17 +85,25 @@ const Community = () => {
   );
 };
 
-const ABCCard = ({ item, index }) => {
+const ABCCard = ({ item, index, scrollToServices }) => {
   return (
     <motion.div
       className="group relative"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      whileHover={{ y: -5 }}
+      transition={{ 
+        duration: 0.7, 
+        delay: index * 0.15,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }}
+      viewport={{ once: true, amount: 0.3 }}
+      whileHover={{ 
+        y: -8,
+        scale: 1.02,
+        transition: { duration: 0.3, ease: "easeOut" }
+      }}
     >
-      <div className={`${item.bgColor} backdrop-blur-sm border ${item.borderColor} bg-white rounded-2xl p-8 h-full transition-all duration-300 group-hover:border-opacity-60 shadow-sm group-hover:shadow-md`}>
+      <div className={`${item.bgColor} backdrop-blur-sm border ${item.borderColor} bg-white rounded-2xl p-8 h-full transition-all duration-500 group-hover:border-orange-500/40 shadow-sm group-hover:shadow-xl group-hover:shadow-orange-500/10`}>
         <div className="flex items-center mb-6">
           <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4">
             <item.icon className="w-6 h-6 text-white" aria-hidden="true" />
@@ -107,7 +117,8 @@ const ABCCard = ({ item, index }) => {
         <p className="text-gray-600 mb-6 leading-relaxed font-light">{item.description}</p>
         
         <button 
-          className="mt-6 w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 rounded-xl font-medium transition-all duration-200 flex items-center justify-center space-x-2 group shadow-sm"
+          onClick={scrollToServices}
+          className="mt-6 w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 rounded-xl font-medium transition-all duration-200 flex items-center justify-center space-x-2 group shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
           aria-label={`Learn more about ${item.title}`}
         >
           <span>Learn More</span>

@@ -30,9 +30,9 @@ function App() {
         <Suspense fallback={<LoadingSpinner />}>
           <Header />
           <Hero />
-          <Services />
           <Vision />
           <Community />
+          <Services />
           <Contact />
           <Footer />
         </Suspense>

@@ -7,6 +7,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Smooth transitions for all interactive elements */
+.smooth-transition {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.smooth-transform {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;

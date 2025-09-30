@@ -1,11 +1,31 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const Header = () => {
-  const navigationItems = ['Services', 'Vision', 'Community', 'Contact'];
+  const navigationItems = ['Vision', 'Framework', 'Services', 'Contact'];
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    const updateScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', updateScroll);
+    return () => window.removeEventListener('scroll', updateScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
+    <motion.nav 
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-200' 
+          : 'bg-white border-b border-gray-200 shadow-sm'
+      }`}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div 
@@ -25,19 +45,24 @@ const Header = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             {navigationItems.map((item) => (
-              <a 
+              <motion.a 
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-600 hover:text-orange-500 transition-colors duration-200 text-sm font-medium"
+                className="relative text-gray-600 hover:text-[#F77531] transition-colors duration-300 text-sm font-medium group"
                 aria-label={`Navigate to ${item} section`}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.95 }}
               >
                 {item}
-              </a>
+                <motion.span
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F77531] group-hover:w-full transition-all duration-300"
+                />
+              </motion.a>
             ))}
           </motion.div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
