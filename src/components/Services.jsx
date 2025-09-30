@@ -19,7 +19,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="relative py-32 bg-slate-950">
+    <section id="services" className="relative py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -28,10 +28,10 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white mb-6">
-            Our <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-quicksand font-semibold text-gray-800 mb-6">
+            Our <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Services</span>
           </h2>
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto font-light">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
             Proven methodologies that deliver transformational results
           </p>
         </motion.div>
@@ -68,7 +68,7 @@ const ServiceCard = ({ service, index, onClick }) => {
       whileHover={{ y: -5 }}
       onClick={onClick}
     >
-      <div className={`${service.bgColor} ${service.borderColor} border rounded-2xl p-8 h-full transition-all duration-300 group-hover:border-opacity-40 group-hover:shadow-lg group-hover:shadow-blue-500/10`}>
+      <div className={`${service.bgColor} ${service.borderColor} bg-white border rounded-2xl p-8 h-full transition-all duration-300 group-hover:border-opacity-60 group-hover:shadow-lg group-hover:shadow-orange-500/20`}>
         <div className="flex items-start space-x-6">
           <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
             <service.icon className="w-8 h-8 text-white" aria-hidden="true" />
@@ -76,19 +76,19 @@ const ServiceCard = ({ service, index, onClick }) => {
           
           <div className="flex-1">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-display font-semibold text-white group-hover:text-cyan-400 transition-colors">
+              <h3 className="text-xl font-quicksand font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">
                 {service.title}
               </h3>
-              <ArrowUpRight className="w-5 h-5 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-200" aria-hidden="true" />
+              <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-200" aria-hidden="true" />
             </div>
             
-            <p className="text-cyan-400 font-medium text-sm mb-4">{service.subtitle}</p>
+            <p className="text-orange-500 font-medium text-sm mb-4">{service.subtitle}</p>
             
-            <p className="text-slate-300 mb-6 leading-relaxed font-light">
+            <p className="text-gray-600 mb-6 leading-relaxed font-light">
               {service.description}
             </p>
             
-            <div className="text-sm text-slate-400 group-hover:text-cyan-400 transition-colors">
+            <div className="text-sm text-gray-500 group-hover:text-orange-500 transition-colors">
               Click to learn more →
             </div>
           </div>

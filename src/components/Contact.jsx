@@ -92,7 +92,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 lg:px-8">
+    <section id="contact" className="py-20 px-6 lg:px-8 bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <motion.div
           variants={containerVariants}
@@ -103,13 +103,13 @@ const Contact = () => {
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-display font-bold text-white mb-6"
+            className="text-4xl md:text-5xl font-quicksand font-semibold text-white mb-6"
           >
-            Get In <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">Touch</span>
+            Get In <span className="text-[#F77531]">Touch</span>
           </motion.h2>
           <motion.p 
             variants={itemVariants}
-            className="text-xl text-slate-400 max-w-3xl mx-auto"
+            className="text-xl text-white/90 max-w-3xl mx-auto"
           >
             Ready to transform your business? Let's discuss how we can help you achieve your goals.
           </motion.p>
@@ -122,16 +122,16 @@ const Contact = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50"
+            className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg"
           >
-            <motion.h3 variants={itemVariants} className="text-2xl font-display font-semibold text-white mb-8">
+            <motion.h3 variants={itemVariants} className="text-2xl font-quicksand font-semibold text-gray-800 mb-8">
               Send us a Message
             </motion.h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <motion.div variants={itemVariants}>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -141,13 +141,13 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
                     placeholder="Your full name"
                   />
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -157,14 +157,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
                     placeholder="your.email@example.com"
                   />
                 </motion.div>
               </div>
 
               <motion.div variants={itemVariants}>
-                <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                   Subject *
                 </label>
                 <input
@@ -174,13 +174,13 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200"
                   placeholder="What can we help you with?"
                 />
               </motion.div>
 
               <motion.div variants={itemVariants}>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -190,7 +190,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 resize-none"
                   placeholder="Tell us about your project or requirements..."
                 />
               </motion.div>
@@ -222,7 +222,7 @@ const Contact = () => {
                 variants={itemVariants}
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 flex items-center justify-center space-x-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 flex items-center justify-center space-x-3 disabled:opacity-50 disabled:cursor-not-allowed shadow-md shadow-orange-500/30"
               >
                 {isSubmitting ? (
                   <>

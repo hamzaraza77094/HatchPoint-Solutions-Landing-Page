@@ -6,12 +6,7 @@ const Hero = () => {
   const scrollToServices = useScrollToSection('services');
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <motion.div
@@ -19,26 +14,35 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <motion.h1 
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold text-white mb-8 leading-tight"
+          {/* Logo & Title */}
+          <motion.div
+            className="flex items-center justify-center gap-4 md:gap-6 mb-12"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              HatchPoint
-            </span>
-            <br />
-            <span className="text-white">Solutions</span>
-          </motion.h1>
+            <img 
+              src="/Orange.svg" 
+              alt="HatchPoint Logo" 
+              className="h-20 md:h-24 lg:h-28 w-auto"
+            />
+            <div className="flex flex-col items-start">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-quicksand font-medium leading-tight">
+                <span className="text-[#F77531]">hatch</span><span className="text-[#7D7D7D]">POINT</span>
+              </h1>
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-quicksand font-medium text-[#7D7D7D] tracking-wider mt-1">
+                SOLUTIONS
+              </p>
+            </div>
+          </motion.div>
           
           <motion.p 
-            className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
+            className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <span className="text-cyan-400 font-medium">
+            <span className="text-orange-500 font-medium">
               "Turning Experience into Your Competitive Advantage"
             </span>
             <br />
@@ -52,7 +56,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.button 
-              className="group bg-white text-slate-900 px-8 py-4 rounded-full font-medium text-lg hover:bg-slate-100 transition-all duration-200 flex items-center space-x-3"
+              className="group bg-gradient-to-r from-[#F77531] to-orange-600 text-white px-8 py-4 rounded-full font-medium text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-200 flex items-center space-x-3 shadow-lg shadow-orange-500/30"
               whileHover={{ scale: 1.02, y: -2 }}
               whileTap={{ scale: 0.98 }}
               onClick={scrollToServices}
@@ -79,8 +83,8 @@ const Hero = () => {
           onClick={scrollToServices}
           aria-label="Scroll to services section"
         >
-          <span className="text-slate-500 text-sm">Scroll to explore</span>
-          <ChevronDown className="w-5 h-5 text-slate-400" />
+          <span className="text-gray-500 text-sm">Scroll to explore</span>
+          <ChevronDown className="w-5 h-5 text-gray-400" />
         </motion.button>
       </motion.div>
     </section>

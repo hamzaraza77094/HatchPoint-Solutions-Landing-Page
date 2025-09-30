@@ -5,7 +5,7 @@ const Header = () => {
   const navigationItems = ['Services', 'Vision', 'Community', 'Contact'];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
+    <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <motion.div 
@@ -14,10 +14,8 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-mono font-bold text-sm">HP</span>
-            </div>
-            <span className="text-white font-display font-semibold text-lg">HatchPoint Solutions</span>
+            <img src="/Orange.svg" alt="HatchPoint Logo" className="h-8 w-8" />
+            <span className="font-quicksand font-medium text-lg"><span className="text-[#F77531]">hatch</span><span className="text-gray-800">Point Solutions</span></span>
           </motion.div>
           
           <motion.div 
@@ -30,7 +28,7 @@ const Header = () => {
               <a 
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-slate-400 hover:text-white transition-colors duration-200 text-sm font-medium"
+                className="text-gray-600 hover:text-orange-500 transition-colors duration-200 text-sm font-medium"
                 aria-label={`Navigate to ${item} section`}
               >
                 {item}

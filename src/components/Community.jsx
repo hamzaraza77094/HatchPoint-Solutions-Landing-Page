@@ -36,7 +36,7 @@ const Community = () => {
   ];
 
   return (
-    <section id="abc-framework" className="relative py-32 bg-slate-950">
+    <section id="abc-framework" className="relative py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -45,10 +45,10 @@ const Community = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white mb-6">
-            The <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">ABC</span> of Your Digital Journey
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-quicksand font-semibold text-gray-800 mb-6">
+            The <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">ABC</span> of Your Digital Journey
           </h2>
-          <p className="text-xl text-slate-400 max-w-4xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             Digital transformation can feel overwhelming — too many tools, too many trends, too many directions. 
             That's why we break it down into the ABC framework to help you move with clarity and confidence.
           </p>
@@ -67,14 +67,14 @@ const Community = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 rounded-3xl p-12 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-display font-semibold text-white mb-6">
+          <div className="bg-white backdrop-blur-sm border border-gray-200 rounded-3xl p-12 max-w-4xl mx-auto shadow-sm">
+            <h3 className="text-2xl md:text-3xl font-quicksand font-semibold text-gray-800 mb-6">
               This isn't theory — it's lived experience.
             </h3>
-            <p className="text-lg text-slate-300 font-light leading-relaxed">
+            <p className="text-lg text-gray-600 font-light leading-relaxed">
               We have turned internal initiatives into multi-million-dollar businesses by following this exact path. 
               The ABC framework helps you move with clarity and confidence, ensuring every step of your digital journey 
-              builds towards <span className="text-cyan-400 font-medium">measurable value</span>.
+              builds towards <span className="text-orange-600 font-medium">measurable value</span>.
             </p>
           </div>
         </motion.div>
@@ -93,21 +93,21 @@ const ABCCard = ({ item, index }) => {
       viewport={{ once: true }}
       whileHover={{ y: -5 }}
     >
-      <div className={`${item.bgColor} backdrop-blur-sm border ${item.borderColor} rounded-2xl p-8 h-full transition-all duration-300 group-hover:border-opacity-40`}>
+      <div className={`${item.bgColor} backdrop-blur-sm border ${item.borderColor} bg-white rounded-2xl p-8 h-full transition-all duration-300 group-hover:border-opacity-60 shadow-sm group-hover:shadow-md`}>
         <div className="flex items-center mb-6">
-          <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mr-4">
-            <item.icon className={`w-6 h-6 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`} aria-hidden="true" />
+          <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4">
+            <item.icon className="w-6 h-6 text-white" aria-hidden="true" />
           </div>
           <div>
-            <h3 className="text-xl font-display font-semibold text-white">{item.title}</h3>
-            <p className="text-slate-400 text-sm">{item.subtitle}</p>
+            <h3 className="text-xl font-quicksand font-semibold text-gray-800">{item.title}</h3>
+            <p className="text-gray-500 text-sm">{item.subtitle}</p>
           </div>
         </div>
         
-        <p className="text-slate-300 mb-6 leading-relaxed font-light">{item.description}</p>
+        <p className="text-gray-600 mb-6 leading-relaxed font-light">{item.description}</p>
         
         <button 
-          className="mt-6 w-full bg-slate-800 hover:bg-slate-700 text-white py-3 rounded-xl font-medium transition-all duration-200 flex items-center justify-center space-x-2 group"
+          className="mt-6 w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 rounded-xl font-medium transition-all duration-200 flex items-center justify-center space-x-2 group shadow-sm"
           aria-label={`Learn more about ${item.title}`}
         >
           <span>Learn More</span>
