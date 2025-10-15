@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import './App.css';
@@ -11,6 +12,8 @@ const Vision = lazy(() => import('./components/Vision'));
 const Community = lazy(() => import('./components/Community'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
+const Blog = lazy(() => import('./components/Blog'));
+const WhitePaperDetail = lazy(() => import('./components/WhitePaperDetail'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -22,21 +25,34 @@ const LoadingSpinner = () => (
   </div>
 );
 
+// Home Page Component
+const HomePage = () => (
+  <>
+    <Hero />
+    <Vision />
+    <Community />
+    <Services />
+    <Contact />
+  </>
+);
+
 function App() {
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-        <Suspense fallback={<LoadingSpinner />}>
-          <Header />
-          <Hero />
-          <Vision />
-          <Community />
-          <Services />
-          <Contact />
-          <Footer />
-        </Suspense>
-      </div>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Header />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<WhitePaperDetail />} />
+            </Routes>
+            <Footer />
+          </Suspense>
+        </div>
+      </Router>
     </ErrorBoundary>
   );
 }
