@@ -18,10 +18,10 @@ const WhitePaperDetail = lazy(() => import('./components/WhitePaperDetail'));
 
 // Loading component
 const LoadingSpinner = () => (
-  <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+  <div className="min-h-screen bg-white flex items-center justify-center">
     <div className="flex flex-col items-center space-y-4">
-      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg animate-pulse"></div>
-      <p className="text-slate-400 text-sm">Loading...</p>
+      <img src="/Orange.svg" alt="HatchPoint Logo" className="w-16 h-16 animate-pulse" />
+      <p className="text-gray-800 text-base font-medium">Loading...</p>
     </div>
   </div>
 );
