@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 // Lazy load components for better performance
@@ -41,6 +42,7 @@ function App() {
     <ErrorBoundary>
       <PerformanceMonitor />
       <Router>
+        <ScrollToTop />
         <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
           <Suspense fallback={<LoadingSpinner />}>
             <Header />

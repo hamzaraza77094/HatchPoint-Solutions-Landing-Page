@@ -238,6 +238,26 @@ const Contact = () => {
               </motion.button>
             </form>
           </motion.div>
+
+          {/* Direct Contact Email */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className="mt-8 text-center"
+          >
+            <motion.p variants={itemVariants} className="text-white/80 text-sm mb-2">
+              Or reach out to us directly at
+            </motion.p>
+            <motion.a
+              variants={itemVariants}
+              href="mailto:contact@hatchpointsolutions.com"
+              className="text-[#F77531] hover:text-orange-600 font-semibold text-lg transition-colors duration-300"
+            >
+              contact@hatchpointsolutions.com
+            </motion.a>
+          </motion.div>
         </div>
       </div>
     </section>

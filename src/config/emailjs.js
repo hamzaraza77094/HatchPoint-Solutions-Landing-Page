@@ -15,7 +15,7 @@ export const EMAILJS_CONFIG = {
   PUBLIC_KEY: 'qcdTg7tfbWwA4NH01',
   
   // Your email address where contact form submissions will be sent
-  TO_EMAIL: 'hamza.raza@hatchpointsolutions.com'
+  TO_EMAIL: 'contact@hatchpointsolutions.com'
 };
 
 // Template parameters mapping
