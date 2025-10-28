@@ -269,8 +269,8 @@ const WhitePaperDetail = () => {
                       }
                         // Check if paragraph contains bold text with **text** format
                         if (paragraph.includes('**') && paragraph.match(/\*\*.*?\*\*/)) {
-                          // Special handling for The HatchPoint Approach section
-                          if (section.title === 'The HatchPoint Approach') {
+                          // Special handling for The Hatchpoint Approach section
+                          if (section.title === 'The Hatchpoint Approach') {
                             // Group phases and their bullets together
                             const phases = [];
                             const lines = paragraph.split('\n').filter(line => line.trim());
@@ -382,7 +382,7 @@ const WhitePaperDetail = () => {
           ) : (
             // No image
             <div className="space-y-6">
-              {section.title === 'The HatchPoint Approach' || section.title === 'The Outcomes' ? (
+              {section.title === 'The Hatchpoint Approach' || section.title === 'The Outcomes' ? (
                 // Special handling for sections with 2-column layout - process entire content
                 (() => {
                   const sections = [];
@@ -431,8 +431,8 @@ const WhitePaperDetail = () => {
                         </p>
                       )}
                       
-                      {/* Special diagram for The HatchPoint Approach */}
-                      {section.title === 'The HatchPoint Approach' && section.diagram ? (
+                      {/* Special diagram for The Hatchpoint Approach */}
+                      {section.title === 'The Hatchpoint Approach' && section.diagram ? (
                         <div className="my-8">
                           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                             {section.diagram.phases.map((phase, index) => (

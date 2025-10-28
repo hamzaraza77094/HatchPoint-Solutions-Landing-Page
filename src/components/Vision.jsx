@@ -13,7 +13,7 @@ const Vision = () => {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-quicksand font-semibold text-gray-800 mb-8">
-            The <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">hatchPoint</span> Difference
+            The <span className="text-orange-600">Hatchpoint</span> Difference
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-12 max-w-4xl mx-auto font-light">
@@ -81,7 +81,7 @@ const Vision = () => {
 
           <div className="bg-gray-50 backdrop-blur-sm rounded-3xl p-12 border border-gray-200 max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-quicksand font-semibold text-gray-800 mb-6">
-              What makes <span className="text-orange-600">hatch</span><span className="text-gray-800">Point</span> different
+              What makes <span className="text-orange-600">Hatchpoint</span> different
               <br className="mb-4" />
               <span className="text-orange-600 font-bold">we've done it before.</span>
             </h3>

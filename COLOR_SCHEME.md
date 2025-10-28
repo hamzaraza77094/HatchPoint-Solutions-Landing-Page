@@ -1,4 +1,4 @@
-# HatchPoint Solutions - Color Scheme
+# Hatchpoint - Color Scheme
 
 ## Brand Colors
 

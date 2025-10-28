@@ -12,7 +12,7 @@ vi.mock('framer-motion', () => ({
 describe('Header', () => {
   it('renders the company logo and name', () => {
     render(<Header />);
-    expect(screen.getByText('HatchPoint Solutions')).toBeInTheDocument();
+    expect(screen.getByText('Hatchpoint')).toBeInTheDocument();
     expect(screen.getByText('HP')).toBeInTheDocument();
   });
 

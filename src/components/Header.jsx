@@ -67,8 +67,8 @@ const Header = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <img src="/Orange.svg" alt="HatchPoint Logo" className="h-8 w-8" />
-              <span className="font-quicksand font-medium text-lg"><span className="text-[#F77531]">hatch</span><span className="text-gray-800">Point Solutions</span></span>
+              <img src="/Orange.svg" alt="Hatchpoint Logo" className="h-8 w-8" />
+              <span className="font-quicksand font-medium text-lg"><span className="text-[#F77531]">Hatchpoint</span></span>
             </motion.div>
           </Link>
           

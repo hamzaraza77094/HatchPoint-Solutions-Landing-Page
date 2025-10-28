@@ -47,11 +47,11 @@ const Blog = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center justify-center mb-6"
           >
-            <img src="/Orange.svg" alt="HatchPoint Logo" className="w-12 h-12" />
+            <img src="/Orange.svg" alt="Hatchpoint Logo" className="w-12 h-12" />
           </motion.div>
           
           <h1 className="font-quicksand text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-            The <span className="text-[#F77531]">hatch</span>Point Journal
+            The <span className="text-[#F77531]">Hatchpoint</span> Journal
           </h1>
           
           <p className="font-quicksand text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

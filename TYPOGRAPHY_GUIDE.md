@@ -1,4 +1,4 @@
-# HatchPoint Solutions - Typography Guide
+# Hatchpoint - Typography Guide
 
 ## Font System
 
@@ -72,7 +72,7 @@
 
 ```jsx
 // Brand Name
-<h1 className="font-quicksand font-medium text-4xl">HatchPoint Solutions</h1>
+<h1 className="font-quicksand font-medium text-4xl">Hatchpoint</h1>
 
 // Main Hero Heading
 <h1 className="font-quicksand font-semibold text-5xl text-gray-800">

@@ -35,8 +35,8 @@ const Footer = () => {
         >
           <Link to="/">
             <div className="flex items-center justify-center space-x-3 mb-8 cursor-pointer">
-              <img src="/Orange.svg" alt="HatchPoint Logo" className="h-10 w-10" />
-              <span className="font-quicksand font-medium text-xl"><span className="text-[#F77531]">hatch</span><span className="text-gray-800">Point Solutions</span></span>
+              <img src="/Orange.svg" alt="Hatchpoint Logo" className="h-10 w-10" />
+              <span className="font-quicksand font-medium text-xl"><span className="text-[#F77531]">Hatchpoint</span></span>
             </div>
           </Link>
           
@@ -70,7 +70,7 @@ const Footer = () => {
           
           <div className="border-t border-gray-200 pt-8">
             <p className="text-gray-500 text-sm font-light">
-              © 2025 hatchPoint Solutions. All rights reserved.
+              © 2025 <span className="text-orange-600">Hatchpoint</span>. All rights reserved.
             </p>
           </div>
         </motion.div>

@@ -20,7 +20,7 @@ const WhitePaperDetail = lazy(() => import('./components/WhitePaperDetail'));
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-white flex items-center justify-center">
     <div className="flex flex-col items-center space-y-4">
-      <img src="/Orange.svg" alt="HatchPoint Logo" className="w-16 h-16 animate-pulse" />
+      <img src="/Orange.svg" alt="Hatchpoint Logo" className="w-16 h-16 animate-pulse" />
       <p className="text-gray-800 text-base font-medium">Loading...</p>
     </div>
   </div>

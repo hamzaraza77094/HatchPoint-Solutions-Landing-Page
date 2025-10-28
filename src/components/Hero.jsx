@@ -45,7 +45,7 @@ const Hero = () => {
           >
             <motion.img 
               src="/Orange.svg" 
-              alt="HatchPoint Logo" 
+              alt="Hatchpoint Logo" 
               className="h-24 md:h-28 lg:h-32 w-auto"
               animate={{ 
                 y: [0, -10, 0],
@@ -58,11 +58,8 @@ const Hero = () => {
             />
             <div className="flex flex-col items-start">
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-quicksand font-medium leading-tight">
-                <span className="text-[#F77531]">hatch</span><span className="text-[#7D7D7D]">POINT</span>
+                <span className="text-[#F77531]">Hatchpoint</span>
               </h1>
-              <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-quicksand font-medium text-[#7D7D7D] tracking-wider mt-1">
-                SOLUTIONS
-              </p>
             </div>
           </motion.div>
           

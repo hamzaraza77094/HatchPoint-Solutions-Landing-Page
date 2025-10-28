@@ -18,12 +18,12 @@ vi.mock('framer-motion', () => ({
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByText('HatchPoint Solutions')).toBeInTheDocument();
+    expect(screen.getByText('Hatchpoint')).toBeInTheDocument();
   });
 
   it('renders the main heading', () => {
     render(<App />);
-    expect(screen.getByText(/HatchPoint/)).toBeInTheDocument();
+    expect(screen.getByText(/Hatchpoint/)).toBeInTheDocument();
     expect(screen.getByText(/Solutions/)).toBeInTheDocument();
   });
 

@@ -7,7 +7,7 @@ export const whitepapers = [
     date: 'October 2024',
     category: 'Digital Transformation',
     readTime: '8 min read',
-    author: 'HatchPoint Solutions',
+    author: 'Hatchpoint',
     image: '/Dark Main Logo.svg',
     pdfUrl: '/Aluminium Smelter White paper.docx.pdf',
     heroImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&h=900&fit=crop',
@@ -17,7 +17,7 @@ export const whitepapers = [
         title: 'Executive Summary',
         content: `One of the world's largest aluminum smelters—producing over 500,000 tonnes per year—embarked on a comprehensive digital transformation initiative to modernize business and operational practices while preparing for a major capacity expansion.
 
-HatchPoint's principal consultants collaborated with leadership to assess current operations, define future-ready processes, and align technology with measurable business outcomes. Through process modeling, gap analysis, and digital strategy alignment, the company built a foundation for operational excellence and sustainable digital value.`
+Hatchpoint's principal consultants collaborated with leadership to assess current operations, define future-ready processes, and align technology with measurable business outcomes. Through process modeling, gap analysis, and digital strategy alignment, the company built a foundation for operational excellence and sustainable digital value.`
       },
       {
         title: 'Industry Context',
@@ -44,7 +44,7 @@ Digital transformation—integrating process excellence, analytics, and scalable
 • Gaps in IT and MES systems that risked rollout delays`
       },
       {
-        title: 'The HatchPoint Approach',
+        title: 'The Hatchpoint Approach',
         content: `**Phase 1 — As-Is Study**
 • Mapped current business processes and IT infrastructure to identify operational and technology gaps
 
@@ -102,7 +102,7 @@ Digital transformation—integrating process excellence, analytics, and scalable
 • Improved governance ensured long-term digital and operational optimization
 
 **Sustained Value**
-• HatchPoint's governance and roadmap approach provided a foundation for continuous improvement, digital maturity, and measurable business impact`
+• Hatchpoint's governance and roadmap approach provided a foundation for continuous improvement, digital maturity, and measurable business impact`
       },
       {
         title: 'Lessons Learned',
@@ -119,7 +119,7 @@ Digital transformation—integrating process excellence, analytics, and scalable
     date: 'October 2024',
     category: 'Digital Transformation',
     readTime: '7 min read',
-    author: 'HatchPoint Solutions',
+    author: 'Hatchpoint',
     image: '/Dark Main Logo.svg',
     pdfUrl: '/Gas processing white paper.docx.pdf',
     heroImage: '/landing_gas_processor.jpg',
@@ -129,7 +129,7 @@ Digital transformation—integrating process excellence, analytics, and scalable
         title: 'Executive Summary',
         content: `A major integrated natural gas liquids (NGL) processing and fractionation operator recognized the need to modernize its operations to stay competitive in an evolving energy market. Legacy systems, siloed processes, and growing operational risk were impacting reliability and profitability.
 
-HatchPoint Solutions partnered directly with the company's executive leadership to design a digital transformation roadmap that aligned strategy, operations, and technology enablement. By leveraging advanced analytics, process automation, and structured change management, the organization built a sustainable foundation for long-term digital resilience and performance improvement.`
+Hatchpoint partnered directly with the company's executive leadership to design a digital transformation roadmap that aligned strategy, operations, and technology enablement. By leveraging advanced analytics, process automation, and structured change management, the organization built a sustainable foundation for long-term digital resilience and performance improvement.`
       },
       {
         title: 'Industry Context',
@@ -158,8 +158,8 @@ Key challenges included:
 These issues created barriers to achieving consistent performance and data-driven decision-making across the organization.`
       },
       {
-        title: 'The HatchPoint Approach',
-        content: `HatchPoint Solutions led a multi-phase digital engagement designed to build clarity, structure, and measurable value:
+        title: 'The Hatchpoint Approach',
+        content: `Hatchpoint led a multi-phase digital engagement designed to build clarity, structure, and measurable value:
 
 **Digital Readiness & Discovery**
 • Conducted a comprehensive maturity review across production, logistics, maintenance, and commercial operations to establish a digital baseline
@@ -224,10 +224,10 @@ These issues created barriers to achieving consistent performance and data-drive
 • Executive-led adoption built a stronger data-driven mindset and long-term digital readiness`
       },
       {
-        title: 'The HatchPoint Impact',
+        title: 'The Hatchpoint Impact',
         content: `This engagement demonstrates how strategic alignment between people, processes, and technology can transform even the most complex industrial operations.
 
-Through structured assessment, C-suite sponsorship, and a focus on measurable outcomes, HatchPoint Solutions helped the client move from reactive management to proactive, data-driven control. The result is a more connected, resilient, and future-ready organization—one positioned to scale innovation and capture new value across its gas processing ecosystem.`
+Through structured assessment, C-suite sponsorship, and a focus on measurable outcomes, Hatchpoint helped the client move from reactive management to proactive, data-driven control. The result is a more connected, resilient, and future-ready organization—one positioned to scale innovation and capture new value across its gas processing ecosystem.`
       }
     ],
     tags: ['Digital Transformation', 'Executive Leadership', 'Process Modernization', 'Predictive Analytics', 'Change Management']

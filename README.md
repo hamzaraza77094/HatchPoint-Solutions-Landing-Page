@@ -1,4 +1,4 @@
-# HatchPoint Solutions Landing Page
+# Hatchpoint Landing Page
 
 A modern, performance-optimized landing page built with React, TypeScript, and Tailwind CSS, featuring smooth animations and accessibility best practices.
 
@@ -154,7 +154,7 @@ npm run test:coverage
 Create a `.env.local` file for environment-specific configurations:
 
 ```env
-VITE_APP_TITLE=HatchPoint Solutions
+VITE_APP_TITLE=Hatchpoint
 VITE_APP_DESCRIPTION=Incubating generational knowledge systems
 ```
 
@@ -202,4 +202,4 @@ For support, email support@hatchpointsolutions.com or create an issue in the rep
 
 ---
 
-Built with ❤️ by the HatchPoint Solutions team
+Built with ❤️ by the Hatchpoint team
